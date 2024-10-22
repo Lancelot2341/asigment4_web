@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Application</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">JavaScript Interactive Web Application</h1>
+
+        <!-- Form Validation Section -->
+        <section id="form-validation" class="mb-5">
+            <h2>Form Validation</h2>
+            <form id="userForm" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                    <div class="invalid-feedback">Please enter a valid email.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password:</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                    <div class="invalid-feedback">Password must be at least 6 characters long.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Confirm Password:</label>
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                    <div class="invalid-feedback">Passwords do not match.</div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <p id="errorMessage" style="color: red;"></p>
+            </form>
+        </section>
+
+        <!-- To-Do List Section -->
+        <section id="todo-list" class="mb-5">
+            <h2>Interactive To-Do List</h2>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="newTask" placeholder="Add a new task">
+                <button class="btn btn-success" onclick="addTask()">Add Task</button>
+            </div>
+            <ul id="taskList" class="list-group"></ul>
+        </section>
+
+        <!-- Number Sorting Tool Section -->
+        <section id="number-sorting" class="mb-5">
+            <h2>Number Sorting Tool</h2>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="numberInput" placeholder="Enter numbers separated by commas">
+                <button class="btn btn-info" onclick="sortNumbers('asc')">Sort Ascending</button>
+                <button class="btn btn-info ms-2" onclick="sortNumbers('desc')">Sort Descending</button>
+            </div>
+            <p id="sortedNumbers"></p>
+        </section>
+
+        <!-- Background Color Change Section -->
+        <section id="background-color" class="mb-5">
+            <h2>Change Background Color</h2>
+            <button class="btn btn-secondary" onclick="changeBackgroundColor()">Change Background Color</button>
+        </section>
+
+        <!-- Current Date and Time Section -->
+        <section id="current-datetime" class="mb-5">
+            <h2>Current Date and Time</h2>
+            <p id="datetime" class="lead"></p>
+        </section>
+
+        <!-- Number Guessing Game (Optional) Section -->
+        <section id="number-guessing-game" class="mb-5">
+            <h2>Number Guessing Game</h2>
+            <button class="btn btn-danger" onclick="startGuessingGame()">Start Game</button>
+        </section>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
